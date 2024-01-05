@@ -17,9 +17,9 @@
 
     echo "3 - ".($ages['Lek']+$ages["Peter"])."<BR>";
 
-    $ages['Peter']=$ $ages['Bob'] - $ages['Lek'];
+    $ages['Peter']= $ages['Bob'] - $ages['Lek'];
     echo "4 - ".$ages['Peter']."<BR>";
-    
+
     ?>
 </body>
 </html>
