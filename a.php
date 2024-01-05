@@ -19,7 +19,7 @@
 
     $ages['Peter']= $ages['Bob'] - $ages['Lek'];
     echo "4 - ".$ages['Peter']."<BR>";
-
+    
     ?>
 </body>
 </html>
