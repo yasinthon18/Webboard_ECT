@@ -10,12 +10,23 @@
     <h1 style="text-align: center;">Webboard Yasinthon</h1>
     <hr>
     <div style="text-align: center;">
+
     <?php
     $id = $_GET['id'];
-    
-    echo "ต้องการดูกระทู้หมายเลข $id"."<br>";
-    
+   
+    $odd = "คี่";
+    $even = "คู่";
+
+    if(($id % 2) == 0){
+        echo "ต้องการดูกระทู้หมายเลข $id"."<br>";
+        echo "เป็นกระทู้หมายเลข$even"."<br>";
+    }
+    else{
+        echo "ต้องการดูกระทู้หมายเลข $id"."<br>";
+        echo "เป็นกระทู้หมายเลข$odd"."<br>";
+    }
     ?>
+
     <table style="border: 2px solid black; width: 40%;" align="center">
         <tr>
             <td colspan="2" style="background-color: #6cd2fe; text-align:left"">แสดงความคิดเห็น</td></tr>

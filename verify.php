@@ -11,10 +11,20 @@
    <div style="text-align: center;">
     
     <?php
-    echo "เข้าสู่ระบบด้วย<br>";
-    echo "Login = $_POST[login]<br>";
-    echo "Password = $_POST[pwd]<br>";
+    $login = $_POST["login"];
+    $pwd = $_POST["pwd"];
+    if($login == "admin" && $pwd == "ad1234"){
+        echo "ยินดีต้อนรับคุณ ADMIN";
+    }
+        elseif($login == "member" && $pwd == "mem1234"){
+        echo "ยินดีต้อนรับคุณ MEMBER";
+    }
+    else{
+        echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
+    }
+  
     ?>
+    <center><a href="index.html">กลับไปหน้าหลัก</a></center>
 
     </div> 
 </body>
