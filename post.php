@@ -33,10 +33,10 @@
         <tr>
             <td><textarea name="message" rows="30" cols="90"></textarea></td></tr>
         <tr>
-            <td><input type="submit" value="ส่งข้อความ"</td>
+            <td><input type="submit" value="ส่งข้อความ"></td>
         </tr>
     </table>
-    <a href="index.html">กลับไปหน้าหลัก</a>
+    <a href="index.php">กลับไปหน้าหลัก</a>
     </div>
 </body>
 </html>
