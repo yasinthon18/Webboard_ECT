@@ -26,12 +26,12 @@
                                 <div class="col-lg-9">
                                     <select name="category" class="form-select">
                                         <?php 
-                                            $conn=new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
-                                            $sql="SELECT * FORM category";
-                                            foreach($conn->query($sql) as $row){
-                                                echo "<option value=$row[id]>$row[name]</option>";
-                                            }
-                                            $conn=null;
+                                        $conn=new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
+                                        $sql="SELECT * FROM category";
+                                        foreach($conn->query($sql) as $row){
+                                            echo "<option value=$row[id]>$row[name]</option>";
+                                        }
+                                        $conn=null;
                                         ?>
                                     </select>
                                 </div>
@@ -61,6 +61,5 @@
             <div class="col-lg-3 col-md-2 col-sm-1"></div>
         </div>
     </div><br>
-
 </body>
 </html>
