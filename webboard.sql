@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2024 at 05:45 AM
+-- Generation Time: Mar 08, 2024 at 06:22 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -32,6 +32,15 @@ CREATE TABLE `category` (
   `name` varchar(32) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'เรื่องทั่วไป'),
+(2, 'เรื่องเรียน'),
+(3, 'เรื่องกีฬา');
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +54,14 @@ CREATE TABLE `comment` (
   `user_id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id`, `content`, `post_date`, `user_id`, `post_id`) VALUES
+(1, 'จะไทร์ไหมน้อ', '2024-03-08 10:51:34', 1, 3),
+(6, 'จะไหวมั้นน้อ', '2024-03-08 10:55:07', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -61,6 +78,15 @@ CREATE TABLE `post` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`id`, `title`, `content`, `post_date`, `cat_id`, `user_id`) VALUES
+(1, 'เรียน', 'ไอพลนั่งหลับ', '2024-03-08 10:26:45', 1, 1),
+(2, 'ฟุตบอล', '1-0', '2024-03-08 10:47:53', 3, 1),
+(3, 'ตอนเย็น', 'วิ่ง', '2024-03-08 10:48:11', 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -76,6 +102,13 @@ CREATE TABLE `user` (
   `email` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `role` char(1) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `login`, `password`, `name`, `gender`, `email`, `role`) VALUES
+(1, 'admin', '8dc9fa69ec51046b4472bb512e292d959edd2aef', 'admin dd', 'm', 'admin@gmail.com', 'a');
 
 --
 -- Indexes for dumped tables
@@ -113,25 +146,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
