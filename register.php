@@ -42,7 +42,7 @@ if (isset($_SESSION['id'])) {
                     <div class="card-body">
                         <form action="register_save.php" method="post">
                             <div class="row">
-                                <label for="user" class="col-lg-3 col-form-label">ชื่อบัญชี:</label>
+                                <label for="user" class="col-lg-3 col-form-label">ชื่อบัญชี :</label>
                                 <div class="col-lg-9">
                                     <input type="text" id="user" name="login" class="form-control" required>
                                 </div>
@@ -54,13 +54,19 @@ if (isset($_SESSION['id'])) {
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="name" class="col-lg-3 col-form-label">ชื่อ-นามสกุล</label>
+                                <label for="pwd2" class="col-lg-3 col-form-label">ใส่รหัสผ่านซ้ำ :</label>
+                                <div class="col-lg-9">
+                                    <input type="password" id="pwd2" name="pwd2" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <label for="name" class="col-lg-3 col-form-label">ชื่อ-นามสกุล :</label>
                                 <div class="col-lg-9">
                                     <input type="text" id="name" name="name" class="form-control" required>
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label  for="gender" class="col-lg-3 form-label">เพศ:</label>
+                                <label  for="gender" class="col-lg-3 form-label">เพศ :</label>
                                 <div class="col-lg-9">
                                     <div class="form-check">
                                         <input type="radio" id="gender" name="gender" value="m" class="form-check-input" required>
@@ -77,7 +83,7 @@ if (isset($_SESSION['id'])) {
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="email" class="col-lg-3 col-form-control">อีเมล:</label>
+                                <label for="email" class="col-lg-3 col-form-control">อีเมล :</label>
                                 <div class="col-lg-9">
                                     <input type="email" id="email" name="email" class="form-control" required>
                                 </div>
