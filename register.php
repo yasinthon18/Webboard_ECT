@@ -19,6 +19,16 @@ if (isset($_SESSION['id'])) {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <body>
+    <script>
+        function OnBlurPwd(){
+            let pwd = document.getElementById("pwd");
+            let pwd2 = document.getElementById("pwd2");
+            if(pwd.value !== pwd2.value){
+                alert("รหัสผ่านทั้งสองช่องไม่ตรงกัน");
+                pwd2.value="";
+            }
+        }
+    </script>
     <div class="container">
         <h1 style="text-align: center;" class="mt-3">Webboard KakKak</h1>
         <?php include "nav.php" ?>
@@ -50,13 +60,13 @@ if (isset($_SESSION['id'])) {
                             <div class="row mt-3">
                                 <label for="pwd" class="col-lg-3 col-form-label">รหัสผ่าน :</label>
                                 <div class="col-lg-9">
-                                    <input type="password" id="pwd" name="pwd" class="form-control" required>
+                                    <input type="password" id="pwd"  name="pwd" class="form-control" required>
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <label for="pwd2" class="col-lg-3 col-form-label">ใส่รหัสผ่านซ้ำ :</label>
                                 <div class="col-lg-9">
-                                    <input type="password" id="pwd2" name="pwd2" class="form-control" required>
+                                    <input type="password" id="pwd2" name="pwd2" class="form-control" onblur="OnBlurPwd()" required>
                                 </div>
                             </div>
                             <div class="row mt-3">
